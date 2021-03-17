@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <base href="https://www.remindbrindes.com.br/" />
     <meta property="og:url" content="https://www.remindbrindes.com.br/" />
     <link rel="canonical" href="https://www.remindbrindes.com.br/" />
-
+    <link rel="stylesheet" href="style.min.css" />
+    <base href="https://www.remindbrindes.com.br/" />
     <meta property="og:title" content="Brindes personalizados, criativos, exclusivos e entrega dentro do prazo | Remind" />
     <meta property="og:description" content="A Remind Brindes cria e fabrica brindes personalizados e corporativos, com design exclusivo para a sua marca se diferenciar." />
     <meta property="og:image" content="https://www.remindbrindes.com.br/arquivos/Image/home/logo-og-image.png" />
@@ -124,13 +124,12 @@
 
   <body>
     <header>
-      <!-- Image replacement -->
-      <h1 title="Brindes Personalizados - Remind">
-        <a href="/" class="logo_top" title="Remind Brindes">Brindes Personalizados - Remind</a>
+      <h1>
+        <a href="/" title="Remind Brindes">Brindes Personalizados - Remind</a>
       </h1>
 
       <form action="">
-        <input type="text" name="search" id="search" />
+        <input type="text" placeholder="Qual brinde você procura?" name="search" id="search" />
       </form>
 
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
@@ -173,40 +172,42 @@
         />
       </svg>
 
-      <a href="" title="">
+      <a href="#" class="image" title="Banner">
         <img src="" alt="" title="" />
       </a>
     </header>
 
     <main>
-      <nav>
-        <ul>
-          <a href="" title="TODOS OS BRINDES">
-            <li>TODOS OS BRINDES</li>
-          </a>
-          <a href="" title="BRINDES POR CATEGORIA">
-            <li>BRINDES POR CATEGORIA</li>
-          </a>
-          <a href="" title="BRINDES EXCLUSIVOS">
-            <li>BRINDES EXCLUSIVOS</li>
-          </a>
-          <a href="" title="BRINDES SOFISTICADOS">
-            <li>BRINDES SOFISTICADOS</li>
-          </a>
-          <a href="" title="CADERNO PERSONALIZADO">
-            <li>CADERNO PERSONALIZADO</li>
-          </a>
-        </ul>
-      </nav>
+      <section class="banner">
+        <nav>
+          <ul>
+            <li>
+              <a href="" title="TODOS OS BRINDES"> TODOS OS BRINDES </a>
+            </li>
 
-      <section>
-        <aside>
-          <h1 title="Brindes Personalizados e entrega sem atraso!">Brindes Personalizados e entrega sem atraso!</h1>
-          <h2 title="Conheça todos os nossos produtos, garantimos qualidade e um Design diferenciado que valoriza a sua marca.">
-            Conheça todos os nossos produtos, garantimos qualidade e um Design diferenciado que valoriza a sua marca.
-          </h2>
+            <li>
+              <a href="" title="BRINDES POR CATEGORIA"> BRINDES POR CATEGORIA </a>
+            </li>
+
+            <li>
+              <a href="" title="BRINDES EXCLUSIVOS"> BRINDES EXCLUSIVOS </a>
+            </li>
+
+            <li>
+              <a href="" title="BRINDES SOFISTICADOS"> BRINDES SOFISTICADOS </a>
+            </li>
+
+            <li>
+              <a href="" title="CADERNO PERSONALIZADO"> CADERNO PERSONALIZADO </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div>
+          <h1>Brindes Personalizados e entrega sem atraso!</h1>
+          <h2>Conheça todos os nossos produtos, garantimos qualidade e um Design diferenciado que valoriza a sua marca.</h2>
           <a href="" title="ORÇAMENTOS">ORÇAMENTOS</a>
-        </aside>
+        </div>
       </section>
 
       <section>
@@ -236,28 +237,24 @@
               </clipPath>
             </defs>
           </svg>
-          <h2 class="Brindes Principais">
+          <h2>
             <small>Brindes</small>
             Principais
           </h2>
 
-          <div class="d-none">
-            <h3 title="Projetos especiais e sob medidas para os clientes!">Projetos especiais e sob medidas para os clientes!</h3>
-            <aside>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. estas nunc, sit laoreet nulla. Proin mi ornare nisl, volutpat sed. Ut posuere varius sit vitae. Sed placerat eget libero. Proin
-                mi ornare nisl, volutpat sed.
-              </p>
-            </aside>
-            <aside>
-              <ul>
-                <li>25 anos de mercado</li>
-                <li>Porta canetas personalizados</li>
-                <li>Brinde para escritório</li>
-                <li>Aromatizador personalizado</li>
-              </ul>
-            </aside>
-          </div>
+          <section class="d-none">
+            <h3>Projetos especiais e sob medidas para os clientes!</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. estas nunc, sit laoreet nulla. Proin mi ornare nisl, volutpat sed. Ut posuere varius sit vitae. Sed placerat eget libero. Proin
+              mi ornare nisl, volutpat sed.
+            </p>
+            <ul>
+              <li>25 anos de mercado</li>
+              <li>Porta canetas personalizados</li>
+              <li>Brinde para escritório</li>
+              <li>Aromatizador personalizado</li>
+            </ul>
+          </section>
         </div>
 
         <div>
@@ -302,28 +299,24 @@
               </clipPath>
             </defs>
           </svg>
-          <h2 class="Faça o seu Orçamento">
+          <h2>
             <small>Faça o seu</small>
             Orçamento
           </h2>
 
-          <div class="d-none">
-            <h3 title="Projetos especiais e sob medidas para os clientes!">Projetos especiais e sob medidas para os clientes!</h3>
-            <aside>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. estas nunc, sit laoreet nulla. Proin mi ornare nisl, volutpat sed. Ut posuere varius sit vitae. Sed placerat eget libero. Proin
-                mi ornare nisl, volutpat sed.
-              </p>
-            </aside>
-            <aside>
-              <ul>
-                <li>25 anos de mercado</li>
-                <li>Porta canetas personalizados</li>
-                <li>Brinde para escritório</li>
-                <li>Aromatizador personalizado</li>
-              </ul>
-            </aside>
-          </div>
+          <section class="d-none">
+            <h3>Projetos especiais e sob medidas para os clientes!</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. estas nunc, sit laoreet nulla. Proin mi ornare nisl, volutpat sed. Ut posuere varius sit vitae. Sed placerat eget libero. Proin
+              mi ornare nisl, volutpat sed.
+            </p>
+            <ul>
+              <li>25 anos de mercado</li>
+              <li>Porta canetas personalizados</li>
+              <li>Brinde para escritório</li>
+              <li>Aromatizador personalizado</li>
+            </ul>
+          </section>
         </div>
 
         <div>
@@ -338,28 +331,24 @@
               fill="#B3C134"
             />
           </svg>
-          <h2 title="Personalizado Squeeze">
+          <h2>
             <small>Personalizado</small>
             Squeeze
           </h2>
 
-          <div class="d-none">
-            <h3 title="Projetos especiais e sob medidas para os clientes!">Projetos especiais e sob medidas para os clientes!</h3>
-            <aside>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. estas nunc, sit laoreet nulla. Proin mi ornare nisl, volutpat sed. Ut posuere varius sit vitae. Sed placerat eget libero. Proin
-                mi ornare nisl, volutpat sed.
-              </p>
-            </aside>
-            <aside>
-              <ul>
-                <li>25 anos de mercado</li>
-                <li>Porta canetas personalizados</li>
-                <li>Brinde para escritório</li>
-                <li>Aromatizador personalizado</li>
-              </ul>
-            </aside>
-          </div>
+          <section class="d-none">
+            <h3>Projetos especiais e sob medidas para os clientes!</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. estas nunc, sit laoreet nulla. Proin mi ornare nisl, volutpat sed. Ut posuere varius sit vitae. Sed placerat eget libero. Proin
+              mi ornare nisl, volutpat sed.
+            </p>
+            <ul>
+              <li>25 anos de mercado</li>
+              <li>Porta canetas personalizados</li>
+              <li>Brinde para escritório</li>
+              <li>Aromatizador personalizado</li>
+            </ul>
+          </section>
         </div>
 
         <div>
@@ -370,33 +359,29 @@
             />
           </svg>
 
-          <h2 title="Personalizado Moleskine">
+          <h2>
             <small>Personalizado</small>
             Moleskine
           </h2>
 
-          <div class="d-none">
-            <h3 title="Projetos especiais e sob medidas para os clientes!">Projetos especiais e sob medidas para os clientes!</h3>
-            <aside>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. estas nunc, sit laoreet nulla. Proin mi ornare nisl, volutpat sed. Ut posuere varius sit vitae. Sed placerat eget libero. Proin
-                mi ornare nisl, volutpat sed.
-              </p>
-            </aside>
-            <aside>
-              <ul>
-                <li>25 anos de mercado</li>
-                <li>Porta canetas personalizados</li>
-                <li>Brinde para escritório</li>
-                <li>Aromatizador personalizado</li>
-              </ul>
-            </aside>
-          </div>
+          <section class="d-none">
+            <h3>Projetos especiais e sob medidas para os clientes!</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. estas nunc, sit laoreet nulla. Proin mi ornare nisl, volutpat sed. Ut posuere varius sit vitae. Sed placerat eget libero. Proin
+              mi ornare nisl, volutpat sed.
+            </p>
+            <ul>
+              <li>25 anos de mercado</li>
+              <li>Porta canetas personalizados</li>
+              <li>Brinde para escritório</li>
+              <li>Aromatizador personalizado</li>
+            </ul>
+          </section>
         </div>
       </section>
 
       <section>
-        <h2 title="Fique por dentro dos nossos últimos lançamentos">Fique por dentro dos nossos últimos lançamentos</h2>
+        <h2>Fique por dentro dos nossos últimos lançamentos</h2>
 
         <ul>
           <li>Produto</li>
@@ -412,7 +397,7 @@
         </aside>
 
         <aside>
-          <h2 title="Título referente ao vídeo">Título referente ao vídeo</h2>
+          <h2>Título referente ao vídeo</h2>
           <p>
             <q>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id in vitae dignissim posuere non amet ut. Suspendisse aliquam facilisi interdum feugiat. Hendrerit accumsan mattis laoreet nunc.
@@ -430,7 +415,7 @@
       </section>
 
       <section>
-        <h2 title="Conheça nossos Brindes mais vendidos!">Conheça nossos Brindes mais vendidos!</h2>
+        <h2>Conheça nossos Brindes mais vendidos!</h2>
 
         <ul>
           <li>
@@ -454,39 +439,39 @@
       </section>
 
       <section>
-        <h2 title="Por que investir em Brindes Criativos com a Remind?">Por que investir em Brindes Criativos com a Remind?</h2>
+        <h2>Por que investir em Brindes Criativos com a Remind?</h2>
 
         <ol>
           <li>
-            <h3 title="25 Anos no mercado;">25 Anos no mercado;</h3>
+            <h3>25 Anos no mercado;</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id in vitae dignissim posuere non amet ut. Suspendisse aliquam facilisi interdum feugiat. Hendrerit accumsan mattis laoreet nunc.
               Risus integer proin donec maecenas facilisi elit. Odio nulla in viverra.
             </p>
           </li>
           <li>
-            <h3 title="Entrega Rápida;">Entrega Rápida;</h3>
+            <h3>Entrega Rápida;</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id in vitae dignissim posuere non amet ut. Suspendisse aliquam facilisi interdum feugiat. Hendrerit accumsan mattis laoreet nunc.
               Risus integer proin donec maecenas facilisi elit. Odio nulla in viverra.
             </p>
           </li>
           <li>
-            <h3 title="Produtos de Qualidade;">Produtos de Qualidade;</h3>
+            <h3>Produtos de Qualidade;</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id in vitae dignissim posuere non amet ut. Suspendisse aliquam facilisi interdum feugiat. Hendrerit accumsan mattis laoreet nunc.
               Risus integer proin donec maecenas facilisi elit. Odio nulla in viverra.
             </p>
           </li>
           <li>
-            <h3 title="Design Diferenciado;">Design Diferenciado;</h3>
+            <h3>Design Diferenciado;</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id in vitae dignissim posuere non amet ut. Suspendisse aliquam facilisi interdum feugiat. Hendrerit accumsan mattis laoreet nunc.
               Risus integer proin donec maecenas facilisi elit. Odio nulla in viverra.
             </p>
           </li>
           <li>
-            <h3 title="Projetos sob medidas.">Projetos sob medidas.</h3>
+            <h3>Projetos sob medidas.</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id in vitae dignissim posuere non amet ut. Suspendisse aliquam facilisi interdum feugiat. Hendrerit accumsan mattis laoreet nunc.
               Risus integer proin donec maecenas facilisi elit. Odio nulla in viverra.
@@ -496,7 +481,7 @@
       </section>
 
       <section>
-        <h2 title="Mais de 1.000 clientes satisfeitos">Mais de 1.000 clientes satisfeitos</h2>
+        <h2>Mais de 1.000 clientes satisfeitos</h2>
         <ul>
           <li>
             <img src="" alt="" title="" />
@@ -515,7 +500,7 @@
           </li>
         </ul>
 
-        <h3 title="Depoimentos">Depoimentos</h3>
+        <h3>Depoimentos</h3>
         <blockquote>
           <img src="" alt="" title="" />
           <p>
@@ -526,8 +511,8 @@
 
       <section>
         <aside>
-          <h2 title="Porquê investir em Brindes Personalizados Criativos?">Porquê investir em Brindes Personalizados Criativos?</h2>
-          <h3 title="Brindes personalizados">Brindes personalizados</h3>
+          <h2>Porquê investir em Brindes Personalizados Criativos?</h2>
+          <h3>Brindes personalizados</h3>
           <p>
             A Remind Brindes é uma empresa especializada em brindes corporativos personalizados. São diversas linhas de brindes para todas as ocasiões. A Remind Brindes é uma empresa de design que
             cria e fabrica produtos exclusivos, visando atender as diferentes demandas de nossos clientes, seja na forma, cor, matéria prima e até nos aromas.
@@ -536,8 +521,8 @@
         </aside>
 
         <aside>
-          <h2 title="Sua marca em destaque com a Remind Brindes Personalizados">Sua marca em destaque com a Remind Brindes Personalizados</h2>
-          <h3 title="Presentes">Presentes</h3>
+          <h2>Sua marca em destaque com a Remind Brindes Personalizados</h2>
+          <h3>Presentes</h3>
           <p>
             É muito importante para as empresas a estabelecer relacionamentos de longo prazo com os clientes. Afinal, seus clientes repetir provavelmente fornecem cerca de 80% de seu faturamento anual
             da empresa.
@@ -551,7 +536,7 @@
 
       <section>
         <aside>
-          <h2 title="Tire suas Dúvidas">Tire suas Dúvidas</h2>
+          <h2>Tire suas Dúvidas</h2>
 
           <form action="">
             <input type="text" placeholder="Nome" />
@@ -570,7 +555,7 @@
         </aside>
 
         <aside>
-          <h2 title="Contatos">Contatos</h2>
+          <h2>Contatos</h2>
 
           <p>
             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="19" viewBox="0 0 15 19" fill="none">
@@ -787,7 +772,7 @@
         </ul>
 
         <div>
-          <h2 title="TODOS OS BRINDES">TODOS OS BRINDES</h2>
+          <h2>TODOS OS BRINDES</h2>
           <a title="BRINDES DE MADEIRA" href="#">BRINDES DE MADEIRA</a>
           <a title="BRINDES ECOLÓGICOS" href="#">BRINDES ECOLÓGICOS</a>
           <a title="BRINDES SOFISTICADOS" href="#">BRINDES SOFISTICADOS</a>
@@ -795,18 +780,18 @@
           <a title="PERSONALIZADOS" href="#">PERSONALIZADOS</a>
         </div>
         <div>
-          <h2 title="BRINDES POR CATEGORIA">BRINDES POR CATEGORIA</h2>
+          <h2>BRINDES POR CATEGORIA</h2>
           <a title="SUPORTE PARA PC, TABLET E CELULAR" href="#">SUPORTE PARA PC, TABLET E CELULAR</a>
           <a title="TECNOLOGIA - POWER BANK" href="#">TECNOLOGIA - POWER BANK</a>
         </div>
         <div>
-          <h2 title="BRINDES EXCLUSIVOS">BRINDES EXCLUSIVOS</h2>
+          <h2>BRINDES EXCLUSIVOS</h2>
           <a href="#" title="MEMO BOARD MAGNÉTICOS">MEMO BOARD MAGNÉTICOS</a>
           <a href="#" title="PORTA OBJETOS MONTÁVEIS">PORTA OBJETOS MONTÁVEIS</a>
           <a href="#" title="RELÓGIOS DE MESA E PAREDE">RELÓGIOS DE MESA E PAREDE</a>
         </div>
         <div>
-          <h2 title="BRINDES SOFISTICADOS">BRINDES SOFISTICADOS</h2>
+          <h2>BRINDES SOFISTICADOS</h2>
           <a href="#" title="EMOTICONS">EMOTICONS</a>
           <a href="#" title="EVENTOS E CONGRESSOS">EVENTOS E CONGRESSOS</a>
           <a href="#" title="JOGOS ECOLÓGICOS">JOGOS ECOLÓGICOS</a>

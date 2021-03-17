@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+$light-grey: #c4c4c4;
+$dark-grey: #768688;
+$font: "Lato", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font;
+  text-decoration: none;
+}
+
+header {
+  padding: 15px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h1 {
+    width: 170px;
+    height: 125px;
+    text-indent: -999999px;
+    background: url("https://remindbrindes.com.br/cliente/css/logo_top-vd.png") no-repeat center;
+  }
+
+  form {
+    width: 60%;
+
+    input {
+      width: 80%;
+      margin: 0 auto;
+      display: block;
+
+      padding: 0.75rem 1.5rem;
+      border-radius: 25px;
+      border: 1px solid $dark-grey;
+
+      &::placeholder {
+        font: bold 16px $font;
+        color: $dark-grey;
+      }
+    }
+  }
+
+  .image {
+    height: 5rem;
+    width: 10rem;
+    border-radius: 12px;
+    background-color: $light-grey;
+  }
+}
+
+main {
+  .banner {
+    padding: 30px 100px;
+
+    nav {
+      ul {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+
+        li {
+          a {
+            text-transform: uppercase;
+            color: $dark-grey;
+
+            &::after {
+              content: url('arrow-down.svg');
+            }
+          }
+        }
+      }
+    }
+
+    background-color: $light-grey;
+    color: white;
+    height: 100vh;
+
+    div {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h1 {
+        font: bold 52px $font;
+      }
+
+      h2 {
+        font: 500 20px $font;
+        margin: 1rem 0;
+      }
+
+      a {
+        font: bold 16px $font;
+        color: #fff;
+        padding: 1rem;
+        border-radius: 25px;
+        background-color: $dark-grey;
+        width: min-content;
+      }
+    }
+  }
+}
