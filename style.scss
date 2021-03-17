@@ -2,6 +2,8 @@
 
 $light-grey: #c4c4c4;
 $dark-grey: #768688;
+$container-x-padding: 100px;
+
 $font: "Lato", sans-serif;
 
 * {
@@ -12,8 +14,13 @@ $font: "Lato", sans-serif;
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 header {
-  padding: 15px 100px;
+  padding: 15px $container-x-padding;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,7 +61,7 @@ header {
 
 main {
   .banner {
-    padding: 30px 100px;
+    padding: 30px $container-x-padding;
 
     nav {
       ul {
@@ -68,7 +75,7 @@ main {
             color: $dark-grey;
 
             &::after {
-              content: url('arrow-down.svg');
+              content: url("arrow-down.svg");
             }
           }
         }
@@ -103,6 +110,42 @@ main {
         background-color: $dark-grey;
         width: min-content;
       }
+    }
+  }
+
+  .especialidades {
+    background-image: url("especialidades-bg.png");
+    margin-top: -5rem;
+    padding: 10rem $container-x-padding;
+    padding-top: 10rem;
+
+    .row {
+      display: grid;
+      grid-template-columns: repeat(4, 20%);
+      justify-content: space-between;
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        border-radius: 10px;
+        padding: 3rem;
+        box-shadow: 0px 0px 15px 0px rgba(#d2d2d2, 0.3);
+        cursor: pointer;
+
+        h2 {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+
+    .d-none {
+      display: none;
     }
   }
 }
