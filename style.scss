@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
-$light-grey: #c4c4c4;
-$lightier-grey: #eee;
+$grey: #c4c4c4;
+$light-grey: #eee;
 $dark-grey: #768688;
 $light-black: #4a4a4a;
-$container-x-padding: 120px;
+$container-padding: 120px;
 $marinho-brand: #002b45;
 $verde-brand: #b3c134;
 
@@ -24,7 +24,7 @@ img {
 }
 
 header {
-  padding: 15px $container-x-padding;
+  padding: 15px $container-padding;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -59,13 +59,13 @@ header {
     height: 5rem;
     width: 10rem;
     border-radius: 12px;
-    background-color: $light-grey;
+    background-color: $grey;
   }
 }
 
 main {
   .banner {
-    padding: 30px $container-x-padding;
+    padding: 30px $container-padding;
 
     nav {
       ul {
@@ -86,7 +86,7 @@ main {
       }
     }
 
-    background-color: $light-grey;
+    background-color: $grey;
     color: white;
     height: 100vh;
 
@@ -120,7 +120,7 @@ main {
   .especialidades {
     background-image: url("especialidades-bg.png");
     margin-top: -5rem;
-    padding: 10rem $container-x-padding;
+    padding: 10rem $container-padding;
     padding-top: 10rem;
 
     .row {
@@ -154,7 +154,7 @@ main {
   }
 
   .lancamentos {
-    background-color: $lightier-grey;
+    background-color: $light-grey;
 
     h2 {
       text-align: center;
@@ -164,8 +164,8 @@ main {
   }
 
   .video-depoimento {
-    background-color: $lightier-grey;
-    padding: $container-x-padding;
+    background-color: $light-grey;
+    padding: $container-padding;
     display: grid;
     justify-content: space-between;
     grid-template-columns: repeat(2, 40%);
@@ -198,7 +198,7 @@ main {
       }
 
       &:first-child {
-        background-color: $light-grey;
+        background-color: $grey;
         width: 450px;
         height: 270px;
         border-radius: 40px;
@@ -211,7 +211,7 @@ main {
           width: 0;
           height: 0;
           background: transparent;
-          border-left-color: $lightier-grey;
+          border-left-color: $light-grey;
           border-left-width: 30px;
           margin: auto;
           left: 20px;
@@ -231,8 +231,8 @@ main {
   }
 
   .explicacao {
-    padding: $container-x-padding;
-    background-color: $lightier-grey;
+    padding: $container-padding;
+    background-color: $light-grey;
 
     h2 {
       font: 700 38px $font;
@@ -317,6 +317,63 @@ main {
         p {
           font: 400 16px $font;
           color: $light-black;
+        }
+      }
+    }
+  }
+
+  .clientes-atendidos {
+    padding: $container-padding;
+
+    h2 {
+      font: 700 28px $font;
+      color: $verde-brand;
+      text-align: center;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+      margin: 4rem 0;
+
+      li {
+        height: 168px;
+        width: 168px;
+        border-radius: 50%;
+        background-color: $grey;
+      }
+    }
+
+    h3 {
+      font: 700 36px $font;
+      text-align: center;
+    }
+
+    blockquote {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: $light-grey;
+      padding: 60px 30px;
+      border-radius: 30px;
+
+      .img-container {
+        height: 81px;
+        width: 81px;
+        border-radius: 50%;
+        background-color: $grey;
+        flex-shrink: 0;
+      }
+
+      q {
+        text-align: justify;
+        margin: 0 3rem;
+        color: $dark-grey;
+
+        &::after,
+        &::before {
+          content: "";
         }
       }
     }
