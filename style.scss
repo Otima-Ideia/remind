@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 $light-grey: #c4c4c4;
+$lightier-grey: #eee;
 $dark-grey: #768688;
-$container-x-padding: 100px;
+$light-black: #4a4a4a;
+$container-x-padding: 120px;
 
 $font: "Lato", sans-serif;
 
@@ -146,6 +148,77 @@ main {
 
     .d-none {
       display: none;
+    }
+  }
+
+  .lancamentos {
+    background-color: $lightier-grey;
+
+    h2 {
+      text-align: center;
+      font: 700 38px $font;
+      color: $dark-grey;
+    }
+  }
+
+  .video-depoimento {
+    background-color: $lightier-grey;
+    padding: $container-x-padding;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(2, 40%);
+
+    aside {
+      h2 {
+        font: 700 28px $font;
+        text-align: center;
+        color: $dark-grey;
+      }
+
+      p {
+        margin: 20px 0;
+        q {
+          font: 400 16px $font;
+          color: $light-black;
+          position: relative;
+
+          &::before {
+            content: url("aspas-duplas.svg");
+            position: absolute;
+            left: -36px;
+            top: -10px;
+          }
+
+          &::after {
+            content: "";
+          }
+        }
+      }
+
+      &:first-child {
+        background-color: $light-grey;
+        width: 450px;
+        height: 270px;
+        border-radius: 40px;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          border: 20px solid transparent;
+          width: 0;
+          height: 0;
+          background: transparent;
+          border-left-color: $lightier-grey;
+          border-left-width: 30px;
+          margin: auto;
+          left: 20px;
+          right: 0;
+          top: 0;
+          text-align: center;
+          bottom: 0;
+        }
+      }
     }
   }
 }
