@@ -79,7 +79,7 @@ main {
             color: $dark-grey;
 
             &::after {
-              content: url("arrow-down.svg");
+              content: url("svg/arrow-down.svg");
             }
           }
         }
@@ -118,7 +118,7 @@ main {
   }
 
   .especialidades {
-    background-image: url("especialidades-bg.png");
+    background-image: url("img/especialidades-bg.png");
     margin-top: -5rem;
     padding: 10rem $container-padding;
     padding-top: 10rem;
@@ -185,7 +185,7 @@ main {
           position: relative;
 
           &::before {
-            content: url("aspas-duplas.svg");
+            content: url("svg/aspas-duplas.svg");
             position: absolute;
             left: -36px;
             top: -10px;
@@ -484,6 +484,49 @@ main {
 
         margin-bottom: 30px;
       }
+    }
+  }
+
+  footer {
+    background-color: $verde-brand;
+    padding: 60px $container-padding;
+    position: relative;
+
+    ul {
+      display: flex;
+      list-style-type: none;
+      margin-bottom: 3rem;
+
+      li {
+        margin-right: 2rem;
+      }
+    }
+
+    section {
+      display: flex;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        margin-right: 3rem;
+
+        h2 {
+          font: 700 16px $font;
+          color: #505050;
+          margin-bottom: 2rem;
+        }
+
+        a {
+          font: 700 16px $font;
+          color: #fff;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+    > img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
     }
   }
 }
