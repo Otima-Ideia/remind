@@ -1,54 +1,62 @@
-$(".depoimentos-slider").slick({
-  arrows: false,
-  dots: false,
-  slidesToShow: 5,
-  autoplay: true,
+$(document).ready(function () {
+  $(".depoimentos-slider").slick({
+    arrows: false,
+    dots: false,
+    slidesToShow: 5,
+    autoplay: true,
 
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 4,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+        },
       },
-    },
-    {
-      breakpoint: 850,
-      settings: {
-        slidesToShow: 3,
+      {
+        breakpoint: 850,
+        settings: {
+          slidesToShow: 3,
+        },
       },
-    },
-    {
-      breakpoint: 767,
-      settings: {
-        slidesToShow: 2,
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+        },
       },
-    },
-    {
-      breakpoint: 650,
-      settings: {
-        slidesToShow: 1,
+      {
+        breakpoint: 650,
+        settings: {
+          slidesToShow: 1,
+        },
       },
-    },
-  ],
-});
+    ],
+  });
 
-$(".lancamentos-slider").slick({
-  arrows: false,
-  dots: false,
-  slidesToShow: 3,
-  autoplay: true,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 2,
+  $(".lancamentos-slider").slick({
+    arrows: false,
+    dots: false,
+    slidesToShow: 3,
+    autoplay: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
       },
-    },
-    {
-      breakpoint: 767,
-      settings: {
-        slidesToShow: 1,
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+        },
       },
-    },
-  ],
+    ],
+  });
+
+  $(".quote").html($(".depoimentos-slider li:first-child").data("quote"));
+
+  $(".depoimentos-slider li").click(function () {
+    $(".quote").html($(this).data("quote"));
+  });
 });
