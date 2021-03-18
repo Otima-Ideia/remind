@@ -1,0 +1,64 @@
+main {
+  .banner {
+    padding: 30px $container-padding;
+
+    nav {
+      ul {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+
+        li {
+          a {
+            text-transform: uppercase;
+            color: $dark-grey;
+
+            &::after {
+              content: url("svg/arrow-down.svg");
+            }
+          }
+        }
+      }
+    }
+
+    background-color: $grey;
+    color: white;
+    height: 100vh;
+
+    div {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h1 {
+        font: bold 52px $font;
+      }
+
+      h2 {
+        font: 500 20px $font;
+        margin: 1rem 0;
+      }
+
+      a {
+        font: bold 16px $font;
+        color: #fff;
+        padding: 1rem;
+        border-radius: 25px;
+        background-color: $dark-grey;
+        width: min-content;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      nav {
+        display: none;
+      }
+
+      div {
+        width: 100%;
+      }
+    }
+  }
+}

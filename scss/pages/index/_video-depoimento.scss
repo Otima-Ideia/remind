@@ -1,0 +1,71 @@
+main {
+  .video-depoimento {
+    background-color: $light-grey;
+    padding: $container-padding;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(2, 40%);
+
+    aside {
+      h2 {
+        font: 700 28px $font;
+        text-align: center;
+        color: $dark-grey;
+      }
+
+      p {
+        margin: 20px 0;
+        q {
+          font: 400 16px $font;
+          color: $light-black;
+          position: relative;
+
+          &::before {
+            content: url("svg/aspas-duplas.svg");
+            position: absolute;
+            left: -36px;
+            top: -10px;
+          }
+
+          &::after {
+            content: "";
+          }
+        }
+      }
+
+      &:first-child {
+        background-color: $grey;
+        width: 100%;
+        height: 270px;
+        border-radius: 40px;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          border: 20px solid transparent;
+          width: 0;
+          height: 0;
+          background: transparent;
+          border-left-color: $light-grey;
+          border-left-width: 30px;
+          margin: auto;
+          left: 20px;
+          right: 0;
+          top: 0;
+          text-align: center;
+          bottom: 0;
+        }
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      grid-template-columns: repeat(1, 100%);
+      row-gap: 2rem;
+
+      aside:last-child {
+        order: -1;
+      }
+    }
+  }
+}

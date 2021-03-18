@@ -1,0 +1,65 @@
+header {
+  padding: 15px $container-padding;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h1 {
+    width: 170px;
+    height: 125px;
+    text-indent: -999999px;
+    background: url("https://remindbrindes.com.br/cliente/css/logo_top-vd.png") no-repeat center/contain;
+  }
+
+  form {
+    width: 60%;
+
+    input {
+      width: 80%;
+      margin: 0 auto;
+      display: block;
+
+      padding: 0.75rem 1.5rem;
+      border-radius: 25px;
+      border: 1px solid $dark-grey;
+
+      &::placeholder {
+        font: bold 16px $font;
+        color: $dark-grey;
+      }
+    }
+  }
+
+  div {
+    svg {
+      margin-right: 0.5rem;
+    }
+  }
+
+  .image {
+    height: 5rem;
+    width: 10rem;
+    border-radius: 12px;
+    background-color: $grey;
+  }
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+
+    form {
+      width: 100%;
+
+      input {
+        text-align: center;
+      }
+    }
+
+    > * {
+      margin-bottom: 1rem;
+    }
+
+    > a {
+      display: none;
+    }
+  }
+}

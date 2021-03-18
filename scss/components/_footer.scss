@@ -1,0 +1,47 @@
+footer {
+  background-color: $verde-brand;
+  padding: 60px $container-padding;
+  position: relative;
+
+  ul {
+    display: flex;
+    list-style-type: none;
+    margin-bottom: 3rem;
+
+    li {
+      margin-right: 2rem;
+    }
+  }
+
+  section {
+    display: flex;
+    flex-wrap: wrap;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      margin-right: 3rem;
+
+      h2 {
+        font: 700 16px $font;
+        color: #505050;
+        margin-bottom: 2rem;
+      }
+
+      a {
+        font: 700 16px $font;
+        color: #fff;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  > img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  @media screen and (max-width: 767px) {
+
+  }
+}

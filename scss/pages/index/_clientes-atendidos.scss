@@ -1,0 +1,78 @@
+main {
+  .clientes-atendidos {
+    padding: $container-padding;
+
+    h2 {
+      font: 700 28px $font;
+      color: $verde-brand;
+      text-align: center;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+      margin: 4rem 0;
+
+      li {
+        display: flex !important;
+        justify-content: center;
+
+        .circle {
+          height: 168px;
+          width: 168px;
+          border-radius: 50%;
+          background-color: $grey;
+        }
+      }
+    }
+
+    h3 {
+      font: 700 36px $font;
+      text-align: center;
+    }
+
+    blockquote {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: $light-grey;
+      padding: 60px 30px;
+      border-radius: 30px;
+
+      .img-container {
+        height: 81px;
+        width: 81px;
+        border-radius: 50%;
+        background-color: $grey;
+        flex-shrink: 0;
+      }
+
+      q {
+        text-align: justify;
+        margin: 0 3rem;
+        color: $dark-grey;
+
+        &::after,
+        &::before {
+          content: "";
+        }
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      blockquote {
+        flex-direction: column;
+
+        .img-container {
+          margin-bottom: 2rem;
+        }
+
+        q {
+          margin: 0;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
