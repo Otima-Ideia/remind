@@ -1,4 +1,41 @@
 $(document).ready(function () {
+  $(".items-row").slick({
+    arrows: false,
+    dots: false,
+    slidesToShow: 4,
+    autoplay: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 650,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+
+  $(".helper h3").html($(".especialidades .item.active").data("title"));
+  $(".helper p").html($(".especialidades .item.active").data("text"));
+
+  $(".especialidades .item").click(function () {
+    $(".especialidades .item").removeClass("active");
+    $(this).addClass("active");
+    $(".helper h3").html($(this).data("title"));
+    $(".helper p").html($(this).data("text"));
+  });
+
   $(".depoimentos-slider").slick({
     arrows: false,
     dots: false,
