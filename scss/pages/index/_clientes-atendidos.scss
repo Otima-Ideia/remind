@@ -14,15 +14,19 @@ main {
       list-style-type: none;
       margin: 4rem 0;
 
-      li {
-        display: flex !important;
-        justify-content: center;
+      .slick-list {
+        width: 100%;
 
-        .circle {
-          height: 168px;
-          width: 168px;
-          border-radius: 50%;
-          background-color: $grey;
+        li {
+          display: flex !important;
+          justify-content: center;
+
+          .circle {
+            height: 168px;
+            width: 168px;
+            border-radius: 50%;
+            background-color: $grey;
+          }
         }
       }
     }
