@@ -378,4 +378,31 @@ main {
       }
     }
   }
+
+  .sobre {
+    padding: $container-padding;
+    display: flex;
+    justify-content: space-between;
+    background-color: $grey;
+
+    aside {
+      width: 40%;
+      h3,
+      p {
+        font: 400 18px $font;
+        margin: 1rem 0;
+      }
+
+      h2 {
+        font: bold 28px $font;
+        color: $marinho-brand;
+      }
+
+      &:first-child {
+        text-align: end;
+      }
+    }
+  }
+
+  
 }
