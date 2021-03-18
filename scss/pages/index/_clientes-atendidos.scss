@@ -20,6 +20,7 @@ main {
         li {
           display: flex !important;
           justify-content: center;
+          cursor: pointer;
 
           .circle {
             height: 168px;
@@ -37,7 +38,7 @@ main {
     }
 
     blockquote {
-      display: flex;
+      display: flex !important;
       align-items: center;
       justify-content: space-between;
       background-color: $light-grey;

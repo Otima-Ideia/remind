@@ -31,6 +31,7 @@ main {
       li {
         width: calc(50% - 4px - 2rem);
         position: relative;
+        cursor: default;
 
         &::after,
         &::before {
@@ -41,6 +42,32 @@ main {
           top: 0;
           border-radius: 50%;
           z-index: 2;
+          transition: transform 0.2s;
+        }
+
+        &:hover {
+          &:nth-child(odd) {
+            h3 {
+              margin-right: 0.5rem;
+            }
+          }
+
+          &:nth-child(even) {
+            h3 {
+              margin-left: 0.5rem;
+            }
+          }
+
+          &::after,
+          &::before {
+            transform: scale(1.1);
+          }
+
+          &:last-child {
+            &::before {
+              transform: none;
+            }
+          }
         }
 
         &:nth-child(odd) {
@@ -81,6 +108,7 @@ main {
         h3 {
           font: 700 28px $font;
           color: $marinho-brand;
+          transition: margin 0.25s;
         }
 
         p {
@@ -94,6 +122,38 @@ main {
       ol {
         padding: 0;
         margin: 0;
+
+        &::after {
+          left: 0;
+        }
+
+        li {
+          width: 100%;
+          text-align: start !important;
+
+          &:nth-child(odd),
+          &:nth-child(even) {
+            align-self: flex-start;
+            padding-left: 1.5rem;
+          }
+
+          &:not(:last-child) {
+            &::before {
+              content: none;
+            }
+          }
+
+          &::after {
+            left: calc(-14px + 2px) !important;
+            background-color: $verde-brand;
+          }
+
+          &:last-child {
+            &::before {
+              left: 0;
+            }
+          }
+        }
       }
     }
   }

@@ -4,6 +4,7 @@ $(document).ready(function () {
     dots: false,
     slidesToShow: 4,
     autoplay: false,
+    asNavFor: ".helper-slider",
     responsive: [
       {
         breakpoint: 1024,
@@ -26,20 +27,26 @@ $(document).ready(function () {
     ],
   });
 
-  $(".helper h3").html($(".especialidades .item.active").data("title"));
-  $(".helper p").html($(".especialidades .item.active").data("text"));
+  $(".helper-slider").slick({
+    arrows: false,
+    dots: false,
+    slidesToShow: 1,
+    draggable: false,
+    fade: true,
+    initialSlide: 1,
+  });
 
   $(".especialidades .item").click(function () {
     $(".especialidades .item").removeClass("active");
     $(this).addClass("active");
-    $(".helper h3").html($(this).data("title"));
-    $(".helper p").html($(this).data("text"));
+    $(".helper-slider").slick("slickGoTo", $(this).parent().data("slick-index")); // Felizôncio Technologies
   });
 
   $(".depoimentos-slider").slick({
     arrows: false,
     dots: false,
     slidesToShow: 5,
+    asNavFor: ".blockquote-slider",
     autoplay: true,
 
     responsive: [
@@ -70,6 +77,19 @@ $(document).ready(function () {
     ],
   });
 
+  $(".blockquote-slider").slick({
+    arrows: false,
+    dots: false,
+    slidesToShow: 1,
+    draggable: false,
+    fade: true,
+    initialSlide: 1,
+  });
+
+  $(".depoimentos-slider li").click(function () {
+    $(".blockquote-slider").slick("slickGoTo", $(this).data("slick-index")); // Felizôncio Technologies
+  });
+
   $(".lancamentos-slider").slick({
     arrows: false,
     dots: false,
@@ -89,11 +109,5 @@ $(document).ready(function () {
         },
       },
     ],
-  });
-
-  $(".quote").html($(".depoimentos-slider li:first-child").data("quote"));
-
-  $(".depoimentos-slider li").click(function () {
-    $(".quote").html($(this).data("quote"));
   });
 });
