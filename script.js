@@ -23,6 +23,8 @@ $(document).ready(function () {
     slidesToShow: 4,
     autoplay: false,
     asNavFor: ".helper-slider",
+    initialSlide: 1,
+    autoplay: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -50,7 +52,6 @@ $(document).ready(function () {
     dots: false,
     slidesToShow: 1,
     draggable: false,
-    fade: true,
     initialSlide: 1,
   });
 
