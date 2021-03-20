@@ -9,12 +9,6 @@ $(document).ready(function () {
     }
   });
 
-  $(".mobile-button").on("mouseleave", function () {
-    $("header nav").slideUp();
-    $(this).removeClass("open");
-    $("header nav").slideUp();
-  });
-
   $("header nav ul li.has-submenu").on("mouseover", function () {
     $(this).find(".submenu-container").slideDown();
   });
