@@ -131,7 +131,6 @@ header {
         position: relative;
 
         a {
-          position: relative;
           text-transform: uppercase;
           color: $dark-grey;
         }
@@ -146,8 +145,7 @@ header {
         }
 
         .submenu-container {
-          height: 0;
-          overflow: hidden;
+          display: none;
           position: absolute;
           padding-top: 1rem;
           width: max-content;
@@ -160,7 +158,7 @@ header {
             position: relative;
 
             &::before {
-              content: none;
+              content: "";
               position: absolute;
               border-radius: 15%;
               height: 20px;
@@ -176,16 +174,6 @@ header {
 
               a {
                 color: #fff;
-              }
-            }
-          }
-        }
-
-        &.open {
-          .submenu-container {
-            .submenu {
-              &::before {
-                content: "";
               }
             }
           }
@@ -222,8 +210,7 @@ header {
     }
 
     nav {
-      height: 0;
-      overflow: hidden;
+      display: none;
       padding-top: 0 !important;
       padding-bottom: 0 !important;
 
@@ -233,6 +220,10 @@ header {
 
         li {
           margin-bottom: 1rem;
+
+          .submenu-container {
+            position: static;
+          }
         }
       }
     }

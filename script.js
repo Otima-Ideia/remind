@@ -2,49 +2,19 @@ $(document).ready(function () {
   $(".mobile-button").click(function () {
     if ($(this).hasClass("open")) {
       $(this).removeClass("open");
-      $("header nav").animate({ height: 0 }, 500);
+      $("header nav").slideUp();
     } else {
       $(this).addClass("open");
-      $("header nav").animate({ height: $("header nav").get(0).scrollHeight }, 500);
+      $("header nav").slideDown();
     }
   });
 
-  $("header nav ul li.has-submenu").on("click mouseover", function () {
-    if ($(this).hasClass("open") || $(this).hasClass("opening")) return;
-
-    let submenu = $(this).find(".submenu-container");
-
-    $(this).addClass("opening");
-    setTimeout(() => {
-      $(this).addClass("open");
-    }, 10);
-
-    if ($(window).width() <= 1150) {
-      $("header nav").animate({ height: $("header nav").get(0).scrollHeight + submenu.get(0).scrollHeight }, 450);
-      $(this).animate({ height: $(this).get(0).scrollHeight + submenu.get(0).scrollHeight }, 500);
-    }
-    submenu.animate({ height: submenu.get(0).scrollHeight }, 200);
-    $(this).removeClass("opening");
+  $("header nav ul li.has-submenu").on("mouseover", function () {
+    $(this).find(".submenu-container").slideDown();
   });
 
   $("header nav ul li.has-submenu").on("mouseleave", function () {
-    if (!$(this).hasClass("open") || $(this).hasClass("closing")) return;
-
-    $(this).addClass("closing");
-    let submenu = $(this).find(".submenu-container");
-
-    if ($(window).width() <= 1150) {
-      $(this).animate({ height: $(this).get(0).scrollHeight - submenu.get(0).scrollHeight - 19 }, 500);
-      $("header nav").animate({ height: $("header nav").get(0).scrollHeight - submenu.get(0).scrollHeight }, 500);
-    }
-
-    submenu.animate({ height: 0 }, 200);
-
-    setTimeout(() => {
-      $(this).removeClass("open");
-    }, 150);
-
-    $(this).removeClass("closing");
+    $(this).find(".submenu-container").slideUp();
   });
 
   $(".items-row").slick({
