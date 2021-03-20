@@ -24,7 +24,9 @@ main {
           padding-right: 0;
           padding-left: 4rem;
         }
-        &.slick-current {
+
+        &.slick-current:not(.children-active),
+        .item.active {
           position: relative;
 
           &::after {
