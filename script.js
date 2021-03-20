@@ -9,6 +9,12 @@ $(document).ready(function () {
     }
   });
 
+  $(".mobile-button").on("mouseleave", function () {
+    $("header nav").slideUp();
+    $(this).removeClass("open");
+    $("header nav").slideUp();
+  });
+
   $("header nav ul li.has-submenu").on("mouseover", function () {
     $(this).find(".submenu-container").slideDown();
   });
@@ -55,8 +61,6 @@ $(document).ready(function () {
   });
 
   $(".especialidades .item").click(function () {
-    $(".especialidades .item").removeClass("active");
-    $(this).addClass("active");
     $(".helper-slider").slick("slickGoTo", $(this).parent().data("slick-index")); // Felizôncio Technologies
   });
 
