@@ -156,6 +156,7 @@ header {
             padding: 15px 30px;
             background-color: $light-black;
             position: relative;
+            border-radius: 4px;
 
             &::before {
               content: "";
