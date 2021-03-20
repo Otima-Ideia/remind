@@ -1,67 +1,240 @@
 header {
-  padding: 15px $container-padding;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
 
-  h1 {
-    width: 170px;
-    height: 125px;
-    text-indent: -999999px;
-    background: url("https://remindbrindes.com.br/cliente/css/logo_top-vd.png") no-repeat center/contain;
+  > *:not(.mobile-button) {
+    padding: 15px $container-padding;
   }
 
-  form {
-    width: 60%;
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    input {
-      width: 80%;
-      margin: 0 auto;
-      display: block;
+    h1 {
+      width: 170px;
+      height: 125px;
+      text-indent: -999999px;
+      background: url("https://remindbrindes.com.br/cliente/css/logo_top-vd.png") no-repeat center/contain;
+    }
 
-      padding: 0.75rem 1.5rem;
-      border-radius: 25px;
-      border: 1px solid $dark-grey;
+    form {
+      width: 60%;
 
-      &::placeholder {
-        font: bold 16px $font;
-        color: $dark-grey;
+      input {
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+
+        padding: 0.75rem 1.5rem;
+        border-radius: 25px;
+        border: 1px solid $dark-grey;
+
+        &::placeholder {
+          font: bold 16px $font;
+          color: $dark-grey;
+        }
+      }
+    }
+
+    div {
+      display: flex;
+
+      svg {
+        margin-right: 0.5rem;
+      }
+    }
+
+    .image {
+      height: 5rem;
+      width: 10rem;
+      border-radius: 12px;
+      background-color: $grey;
+    }
+  }
+
+  .mobile-button {
+    display: none;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    width: 4em;
+    height: 4em;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 2;
+
+    &__burguer {
+      width: 3em;
+      height: 0.25em;
+      background-color: $dark-grey;
+      border-radius: 5px;
+      position: relative;
+      transition: 0.2s;
+
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        width: 3rem;
+        height: 0.25rem;
+        background-color: $grey;
+        border-radius: 5px;
+        transition: 0.5s;
+      }
+
+      &::after {
+        transform: translateY(-16px);
+      }
+
+      &::before {
+        transform: translateY(16px);
+      }
+    }
+
+    &.open {
+      > div {
+        height: 0;
+
+        &::after {
+          transform: rotate(45deg);
+        }
+
+        &::before {
+          transform: rotate(-45deg);
+        }
       }
     }
   }
 
-  div {
-    display: flex;
-
-    svg {
-      margin-right: 0.5rem;
-    }
-  }
-
-  .image {
-    height: 5rem;
-    width: 10rem;
-    border-radius: 12px;
+  nav {
+    margin-top: 1rem;
     background-color: $grey;
+
+    &.open {
+      display: flex;
+      background-color: #fff;
+      max-height: 100vh;
+      transition: max-height 1s;
+
+      ul {
+        flex-direction: column;
+      }
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+
+      li {
+        position: relative;
+
+        a {
+          position: relative;
+          text-transform: uppercase;
+          color: $dark-grey;
+        }
+
+        &.has-submenu {
+          &::after {
+            content: url("svg/arrow-down.svg");
+            right: -25px;
+            top: -0.5px;
+            position: absolute;
+          }
+        }
+
+        .submenu-container {
+          height: 0;
+          overflow: hidden;
+          position: absolute;
+          padding-top: 1rem;
+          width: max-content;
+
+          .submenu {
+            display: flex;
+            flex-direction: column;
+            padding: 15px 30px;
+            background-color: $light-black;
+            position: relative;
+
+            &::before {
+              content: none;
+              position: absolute;
+              border-radius: 4px;
+              height: 20px;
+              width: 20px;
+              background-color: #4a4a4a;
+              rotate: 45deg;
+              top: -5px;
+              right: calc(50% - 10px);
+            }
+
+            li {
+              margin: 0.25rem 0;
+
+              a {
+                color: #fff;
+              }
+            }
+          }
+        }
+
+        &.open {
+          .submenu-container {
+            .submenu {
+              &::before {
+                content: "";
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   @media screen and (max-width: 767px) {
-    flex-direction: column;
+    .row {
+      flex-direction: column;
 
-    form {
-      width: 100%;
+      form {
+        width: 100%;
 
-      input {
-        text-align: center;
+        input {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      > * {
+        margin-bottom: 1rem;
+      }
+
+      > a {
+        display: none;
       }
     }
-
-    > * {
-      margin-bottom: 1rem;
+  }
+  @media screen and (max-width: 1150px) {
+    .mobile-button {
+      display: flex;
     }
 
-    > a {
-      display: none;
+    nav {
+      height: 0;
+      overflow: hidden;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+
+      background-color: #fff;
+      ul {
+        flex-direction: column;
+
+        li {
+          margin-bottom: 1rem;
+        }
+      }
     }
   }
 }
