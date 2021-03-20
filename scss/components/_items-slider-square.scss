@@ -1,0 +1,12 @@
+&::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background: linear-gradient(251.56deg, #b3c134 -3220.27%, #b3c134 1152.16%);
+  bottom: -45px;
+  border-radius: 4px;
+  z-index: 9;
+  transform: rotate(45deg);
+  left: calc(50% - 10px);
+}

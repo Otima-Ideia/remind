@@ -55,12 +55,9 @@ $(document).ready(function () {
     initialSlide: 1,
   });
 
-  $(".especialidades .item-container").addClass("children-active");
   $(".especialidades .item").click(function () {
-    $(".especialidades .item-container").addClass("children-active");
-    $(".especialidades .item").removeClass("active");
-    $(this).addClass("active");
-    $(this).parent().removeClass("children-active");
+    $(".especialidades .item-container").removeClass("active");
+    $(this).parent().addClass("active");
     $(".helper-slider").slick("slickGoTo", $(this).parent().data("slick-index")); // Felizôncio Technologies
   });
 
