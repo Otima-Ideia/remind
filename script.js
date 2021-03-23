@@ -10,11 +10,11 @@ $(document).ready(function () {
   });
 
   $("header nav ul li.has-submenu").on("mouseover", function () {
-    $(this).find(".submenu-container").slideDown();
+    $(this).find(".submenu-container").stop().slideDown(200);
   });
 
   $("header nav ul li.has-submenu").on("mouseleave", function () {
-    $(this).find(".submenu-container").slideUp();
+    $(this).find(".submenu-container").stop().slideUp(200);
   });
 
   $(".banner-slider").slick({
