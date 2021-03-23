@@ -17,6 +17,11 @@ $(document).ready(function () {
     $(this).find(".submenu-container").slideUp();
   });
 
+  $(".banner-slider").slick({
+    arrows: false,
+    dots: true,
+  })
+
   $(".items-row").slick({
     arrows: false,
     dots: false,

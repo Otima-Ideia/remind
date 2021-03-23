@@ -4,22 +4,23 @@ main {
 
     background-color: $grey;
     color: white;
-    height: 100vh;
+    height: 80vh;
 
-    div {
-      width: 50%;
-      height: 100%;
+    .banner-item {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      margin-top: 1%;
 
       h1 {
         font: bold 52px $font;
+        width: 45%;
       }
 
       h2 {
         font: 500 20px $font;
         margin: 1rem 0;
+        width: 45%;
       }
 
       a {
@@ -32,11 +33,49 @@ main {
       }
     }
 
+    .slick-dots {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1rem;
+      list-style-type: none;
+
+      li {
+        border: 1px solid $dark-grey;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background-color: $light-grey;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        margin: 0 0.25rem;
+
+        &:hover {
+          background-color: $grey;
+        }
+
+        &.slick-active {
+          border: 1px solid $dark-grey;
+          background-color: $dark-grey;
+        }
+
+        button {
+          display: none;
+        }
+      }
+    }
+
     @media screen and (max-width: 767px) {
-      div {
-        width: 100%;
+      .banner-item {
+        margin-top: 0;
+
         h1 {
           font-size: 36px;
+        }
+
+        h1,
+        h2 {
+          width: auto;
         }
       }
     }
