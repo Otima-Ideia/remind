@@ -107,6 +107,22 @@ header {
     }
   }
 
+  nav#categoria {
+    margin-top: 0;
+    height: 67px;
+    padding-top: 22px;
+    justify-content: center;
+    background: #B3C134;
+
+    ul {
+      li {
+        a {
+          color: #FFF !important;
+        }
+      }
+    }
+  }
+
   nav {
     margin-top: 1rem;
     background-color: $grey;
