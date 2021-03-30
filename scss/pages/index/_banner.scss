@@ -1,16 +1,14 @@
 main {
   .banner {
-    padding: 30px $container-padding;
-
-    background-color: $grey;
     color: white;
-    height: 80vh;
 
     .banner-item {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      margin-top: 1%;
+      background-size: cover;
+
+      padding: 160px;
 
       h1 {
         font: bold 52px $font;
@@ -66,8 +64,13 @@ main {
     }
 
     @media screen and (max-width: 767px) {
+      background-color: $grey;
+      padding: $container-padding;
+
       .banner-item {
         margin-top: 0;
+        background-image: none !important;
+        padding: 0;
 
         h1 {
           font-size: 36px;

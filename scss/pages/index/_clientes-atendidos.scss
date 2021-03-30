@@ -22,12 +22,16 @@ main {
           justify-content: center;
           cursor: pointer;
 
-          .circle {
+          img {
             height: 168px;
             width: 168px;
-            border-radius: 50%;
-            background-color: $grey;
           }
+          // .circle {
+          //   height: 168px;
+          //   width: 168px;
+          //   border-radius: 50%;
+          //   background-color: $grey;
+          // }
         }
       }
     }

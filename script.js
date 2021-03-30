@@ -70,7 +70,7 @@ $(document).ready(function () {
     arrows: false,
     dots: false,
     slidesToShow: 5,
-    asNavFor: ".blockquote-slider",
+    // asNavFor: ".blockquote-slider",
     autoplay: true,
 
     responsive: [
