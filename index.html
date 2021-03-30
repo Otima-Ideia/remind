@@ -6,6 +6,8 @@
     <meta property="og:url" content="https://www.remindbrindes.com.br/" />
     <link rel="canonical" href="https://www.remindbrindes.com.br/" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://vjs.zencdn.net/7.11.4/video-js.css" />
+
     <link rel="stylesheet" href="style.min.css" />
     <!-- <base href="https://www.remindbrindes.com.br/" /> -->
     <meta property="og:title" content="Brindes personalizados, criativos, exclusivos e entrega dentro do prazo | Remind" />
@@ -522,25 +524,25 @@
     <main>
       <section class="banner">
         <div class="banner-slider">
-          <div class="banner-item" style="background-image: url('img/banners/banner1.jpg');">
+          <div class="banner-item" style="background-image: url('img/banners/banner1.jpg')">
             <h1>Brindes Personalizados e entrega sem atraso!</h1>
             <h2>Conheça todos os nossos produtos, garantimos qualidade e um Design diferenciado que valoriza a sua marca.</h2>
             <a href="" title="ORÇAMENTOS">ORÇAMENTOS</a>
           </div>
 
-          <div class="banner-item" style="background-image: url('img/banners/banner2.jpg');">
+          <div class="banner-item" style="background-image: url('img/banners/banner2.jpg')">
             <h1>Brindes Personalizados e entrega sem atraso!</h1>
             <h2>Conheça todos os nossos produtos, garantimos qualidade e um Design diferenciado que valoriza a sua marca.</h2>
             <a href="" title="ORÇAMENTOS">ORÇAMENTOS</a>
           </div>
 
-          <div class="banner-item" style="background-image: url('img/banners/banner3.jpg');">
+          <div class="banner-item" style="background-image: url('img/banners/banner3.jpg')">
             <h1>Brindes Personalizados e entrega sem atraso!</h1>
             <h2>Conheça todos os nossos produtos, garantimos qualidade e um Design diferenciado que valoriza a sua marca.</h2>
             <a href="" title="ORÇAMENTOS">ORÇAMENTOS</a>
           </div>
 
-          <div class="banner-item" style="background-image: url('img/banners/banner4.jpg');">
+          <div class="banner-item" style="background-image: url('img/banners/banner4.jpg')">
             <h1>Brindes Personalizados e entrega sem atraso!</h1>
             <h2>Conheça todos os nossos produtos, garantimos qualidade e um Design diferenciado que valoriza a sua marca.</h2>
             <a href="" title="ORÇAMENTOS">ORÇAMENTOS</a>
@@ -886,13 +888,13 @@
 
       <section class="video-depoimento">
         <aside>
-          <iframe
-            src="https://www.youtube.com/embed/B9O4geyOq4c"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+          <video id="my-video" class="video-js" controls preload="auto" width="640" height="264" poster="img/Discovery.jpg" data-setup="{}">
+            <source src="video/discovery.mp4" type="video/mp4" />
+            <p class="vjs-no-js">
+              To view this video please enable JavaScript, and consider upgrading to a web browser that
+              <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
+          </video>
         </aside>
 
         <aside>
@@ -1210,6 +1212,7 @@
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
