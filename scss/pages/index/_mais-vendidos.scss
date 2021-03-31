@@ -1,7 +1,39 @@
 main {
   .mais-vendidos {
-    font: 700 38px $font;
-    text-align: center;
-    color: $dark-grey;
+    h2 {
+      font: 700 38px $font;
+      text-align: center;
+      color: $dark-grey;
+    }
+
+    .mais-vendidos-slider {
+      padding: 0 30px;
+
+      .arrow-left,
+      .arrow-right {
+        position: absolute;
+        top: calc(50% - 24px);
+        cursor: pointer;
+        z-index: 99;
+      }
+
+      .arrow-left {
+        left: 0;
+      }
+
+      .arrow-right {
+        right: 0;
+      }
+
+      li {
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 215px;
+          margin: 0 30px;
+        }
+      }
+    }
   }
 }
