@@ -5,8 +5,14 @@ main {
     display: grid;
     justify-content: space-between;
     grid-template-columns: repeat(2, 40%);
+    grid-template-rows: 300px;
 
     aside {
+      .video-js {
+        max-width: 100%;
+        max-height: 100%;
+      }
+
       h2 {
         font: 700 28px $font;
         text-align: center;
